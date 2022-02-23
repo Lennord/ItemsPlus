@@ -18,7 +18,7 @@ function ItemsPlusItemsplusCmdReload(s: sender):
 function ItemsPlusItemsplusCmdInfo(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.itemsplus.info" or "itemsplus.itemsplus.*":
 		send "" to {_s}
-		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.2c&f%nl%&8| &7Support version&6: &c1.18.1&f%nl%&8| &7Plugins required&6: &cSkript &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
+		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.2c&f%nl%&8| &7Support version&6: &c1.18.1&f%nl%&8| &7Plugins required&6: &cSkript&7/&cSkBee&7/&cSkRayfall &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
 		stop
 	else:
 		send "&4| &cYou do not have permission to use this command !" to {_s}
