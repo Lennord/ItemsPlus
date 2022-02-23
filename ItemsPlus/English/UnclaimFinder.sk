@@ -2,7 +2,7 @@
 
 # |-> This skript plugin allows you to add lots of other items !
 
-# |-> ItemsPlus Update 1.0.0-SNAPSHOT 2022.2b
+# |-> ItemsPlus Update 1.0.0-SNAPSHOT 2022.2c
 
 #  |-> PLUGIN CODE:
 
@@ -80,6 +80,23 @@ Function ItemsPlusUnclaimFinder(s: sender, typeunclaimfinder: text):
 	else:
 		send action bar "&6You have unclaim Finder found &c%{_result.unclaimfinder.checkblock}% blocks &6!" to {_s}
 		stop
+
+on craft:	
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level1" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &cYou do not have permission to craft this item" to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level2" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &cYou do not have permission to craft this item" to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.leve3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &cYou do not have permission to craft this item" to player
+			stop
 
 on right click:
 	if name of player's tool = "&fUnclaim Finder &7(&cLevel.1&7)":
