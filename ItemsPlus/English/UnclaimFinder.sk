@@ -93,7 +93,7 @@ on craft:
 			send "&4| &cYou do not have permission to craft this item" to player
 			stop
 	if event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)":
-		if player doesn't have permission "itemsplus.craft.unclaimfinder.leve3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			send "&4| &cYou do not have permission to craft this item" to player
 			stop
