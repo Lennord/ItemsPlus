@@ -2,7 +2,7 @@
 
 # |-> This skript plugin allows you to add lots of other items !
 
-# |-> ItemsPlus Update 1.0.0-SNAPSHOT 2022.2a
+# |-> ItemsPlus Update 1.0.0-SNAPSHOT 2022.2b
 
 #  |-> PLUGIN CODE:
 
@@ -18,7 +18,7 @@ function ItemsPlusItemsplusCmdReload(s: sender):
 function ItemsPlusItemsplusCmdInfo(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.itemsplus.info" or "itemsplus.itemsplus.*":
 		send "" to {_s}
-		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.2a&f%nl%&8| &7Support version&6: &c1.18.1&f%nl%&8| &7Plugins required&6: &cSkript &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
+		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.2b&f%nl%&8| &7Support version&6: &c1.18.1&f%nl%&8| &7Plugins required&6: &cSkript &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
 		stop
 	else:
 		send "&4| &cYou do not have permission to use this command !" to {_s}
@@ -49,7 +49,7 @@ function ItemsPlusItemsplusCmdGiveOpenMenu(s: sender):
 
 function ItemsPlusItemsplusCmdGiveOpenMenuUnclaimFinder(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.give.openmenu" or "itemsplus.give.*":
-		set metadata tag "ItemPlusGiveMenuUnclaimFinder" of {_s} to chest inventory with 6 rows named "&6» &eHammer (&c3x3&e)"
+		set metadata tag "ItemPlusGiveMenuUnclaimFinder" of {_s} to chest inventory with 6 rows named "&6» &eUnclaim Finder"
 		set slot 12 of metadata tag "ItemPlusGiveMenuUnclaimFinder" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.1&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder !", "" and "&cClick &6for open menu of give this unclaim finder..." with nbt "{CustomModelData:1}"
 		set slot 13 of metadata tag "ItemPlusGiveMenuUnclaimFinder" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.2&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder !", "" and "&cClick &6for open menu of give this unclaim finder..." with nbt "{CustomModelData:2}"
 		set slot 14 of metadata tag "ItemPlusGiveMenuUnclaimFinder" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.3&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder !", "" and "&cClick &6for open menu of give this unclaim finder..." with nbt "{CustomModelData:3}"
@@ -383,7 +383,7 @@ on inventory click:
 		if name of event-slot = "&6« &cPage précédente":
 			ItemsPlusItemsplusCmdGiveOpenMenu(player)
 		if name of event-slot = "&8| &fWooden Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.wooden" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.wooden" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -391,7 +391,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fStone Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.stone" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.stone" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -399,7 +399,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fIron Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.iron" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.iron" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -407,7 +407,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fGolden Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.golden" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.golden" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -415,7 +415,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fDiamond Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.diamond" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.diamond" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -423,7 +423,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fNetherite Hammer &7(&c3x3&7)":
-			if player has permission "itemsplus.give.hammer3x3.netherite" or "itemsplus.give." or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer3x3.netherite" or "itemsplus.give.*" or "itemsplus.give.hammer3x3.*" or "itemsplus.*":
 				close player's inventory
 				give netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -488,7 +488,7 @@ on inventory click:
 		if name of event-slot = "&6« &cPage précédente":
 			ItemsPlusItemsplusCmdGiveOpenMenu(player)
 		if name of event-slot = "&8| &fWooden Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.wooden" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.wooden" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -496,7 +496,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fStone Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.stone" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.stone" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -504,7 +504,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fIron Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.iron" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.iron" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -512,7 +512,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fGolden Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.golden" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.golden" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -520,7 +520,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fDiamond Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.diamond" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.diamond" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -528,7 +528,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fNetherite Hammer &7(&c5x5&7)":
-			if player has permission "itemsplus.give.hammer5x5.netherite" or "itemsplus.give." or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.hammer5x5.netherite" or "itemsplus.give.*" or "itemsplus.give.hammer5x5.*" or "itemsplus.*":
 				close player's inventory
 				give netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -579,7 +579,7 @@ on inventory click:
 		if name of event-slot = "&6« &cPage précédente":
 			ItemsPlusItemsplusCmdGiveOpenMenu(player)
 		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.1&7)":
-			if player has permission "itemsplus.give.unclaimfinder.level1" or "itemsplus.give." or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.unclaimfinder.level1" or "itemsplus.give.*" or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
 				close player's inventory
 				give book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}" to player
 				stop
@@ -587,7 +587,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.2&7)":
-			if player has permission "itemsplus.give.unclaimfinder.level2" or "itemsplus.give." or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.unclaimfinder.level2" or "itemsplus.give.*" or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
 				close player's inventory
 				give book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}" to player
 				stop
@@ -595,7 +595,7 @@ on inventory click:
 				send "&4| &cYou do not have permission to use this item !" to {_s}
 				stop
 		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.3&7)":
-			if player has permission "itemsplus.give.unclaimfinder.level3" or "itemsplus.give." or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
+			if player has permission "itemsplus.give.unclaimfinder.level3" or "itemsplus.give.*" or "itemsplus.give.unclaimfinder.*" or "itemsplus.*":
 				close player's inventory
 				give book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}" to player
 				stop
