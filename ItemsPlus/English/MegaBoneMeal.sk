@@ -41,7 +41,7 @@ on right click with bonemeal:
 				stop
 
 on craft:	
-	if event-item = book named "&fMega Bone Meal":
+	if event-item = 2 bone meal named "&fMega Bone Meal":
 		if player doesn't have permission "itemsplus.craft.megabonemeal" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			send "&4| &cYou do not have permission to craft this item" to player
