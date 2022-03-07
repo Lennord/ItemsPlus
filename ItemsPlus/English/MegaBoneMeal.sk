@@ -11,32 +11,36 @@ on right click with bonemeal:
 	if name of player's tool = "&fMega Bone Meal":
 		if event-block = wheat:
 			set event-block to ripe wheat plant
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 		if event-block = carrot plant:
 			set event-block to ripe carrot plant
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 		if event-block = potato plant:
 			set event-block to ripe potato plant
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 		if event-block = beetroot plant:
 			set event-block to ripe beetroot plant
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 		if event-block = melon stem:
 			set event-block to ripe melon stem
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 		if event-block = pumpkin stem:
 			set event-block to ripe pumpkin stem
-			if player's gamemode = survival or adventure:
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = grass block or crimson nylium or warped nylium:
+			if player's gamemode = survival:
 				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
 				stop
 
