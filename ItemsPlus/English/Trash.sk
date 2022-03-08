@@ -1,0 +1,32 @@
+# |-> ItemsPlus (Skript) << # |->> Skript developed by alexisl315 (Lennord)
+
+# |-> This skript plugin allows you to add lots of other items !
+
+#  |-> PLUGIN CODE:
+
+on load:
+	register new shaped recipe for book named "&fTrash" with nbt "{CustomModelData:4}" using redstone, paper, redstone, paper, paper, paper, redstone, paper and redstone with id "trash" in group "book"
+
+on right click with book:
+	if name of player's tool = "&fTrash":
+		set metadata tag "TrashGUI" of player to dropper inventory named "&8Trash"
+		open (metadata tag "TrashGUI" of player) to player
+
+on craft:	
+	if event-item = book named "&fTrash":
+		if player doesn't have permission "itemsplus.craft.trash" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &cYou do not have permission to craft this item" to player
+			stop
+
+on enchant prepare:
+	if name of item = "&fTrash":
+		cancel event
+		stop
+
+on inventory click:
+	event-inventory = anvil inventory:
+		if index of event-slot = 2:
+			if event-slot = book with nbt "{CustomModelData:4}":
+				cancel event
+				stop
