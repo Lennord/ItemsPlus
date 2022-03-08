@@ -16,7 +16,7 @@ function ItemsPlusItemsplusCmdReload(s: sender):
 function ItemsPlusItemsplusCmdInfo(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.itemsplus.info" or "itemsplus.itemsplus.*":
 		send "" to {_s}
-		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Description of plugin&6: &cItemsPlus is a skript plugin that allows you to add many new items that have never been seen before in vanilla Minecraft.&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.3a&f%nl%&8| &7Support version&6: &c1.18.2&f%nl%&8| &7Plugins required&6: &cSkript&7/&cSkBee &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
+		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Description of plugin&6: &cItemsPlus is a skript plugin that allows you to add many new items that have never been seen before in vanilla Minecraft.&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.3b&f%nl%&8| &7Support version&6: &c1.18.2&f%nl%&8| &7Plugins required&6: &cSkript&7/&cSkBee &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
 		stop
 	else:
 		send "&4| &cYou do not have permission to use this command !" to {_s}
@@ -38,9 +38,24 @@ function ItemsPlusItemsplusCmdGiveOpenMenu(s: sender):
 		set slot 1 of metadata tag "ItemsPlusGiveMenu" of {_s} to iron pickaxe named "&fHammer &7(&c5x5&7)" with lore "", "&7These hammers can undermine 5 out of 5 blocks !", "" and "&cClick &6for open menu of give all hammer type..." with nbt "{CustomModelData:1}"
 		set slot 2 of metadata tag "ItemsPlusGiveMenu" of {_s} to book named "&fUnclaim Finder" with lore "", "&7This item allows you to find in percentage the", "&7number of block type concerned by this item !", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:1}"
 		set slot 3 of metadata tag "ItemsPlusGiveMenu" of {_s} to bone meal named "&fMega Bone meal" with lore "", "&7This item allows you to grow seeds up to a maximum", "&7of one hit !", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:1}"
+		set slot 4 of metadata tag "ItemsPlusGiveMenu" of {_s} to book named "&fTrash" with lore "", "&7This item allows you to open a trash can.", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:4}"
 		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusGiveMenu" of {_s} to orange stained glass pane
 		set slot 49 of metadata tag "ItemsPlusGiveMenu" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
 		open (metadata tag "ItemsPlusGiveMenu" of {_s}) to {_s}
+		stop
+	else:
+		send "&4| &cYou do not have permission to use this command !" to {_s}
+		stop
+
+function ItemsPlusItemsplusCmdGiveOpenMenuTrash(s: sender):
+	if {_s} has permission "itemsplus.*" or "itemsplus.give.openmenu" or "itemsplus.give.*":
+		set metadata tag "ItemsPlusGiveMenuTrash" of {_s} to chest inventory with 6 rows named "&6» &eTrash"
+		set slot 13 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to book named "&8| &fTrash" with lore "&7This item allows you to open a trash can.", "" and "&cClick &6for give this trash..." with nbt "{CustomModelData:4}"
+		set slot 22 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to crafting table named "&fCraft Trash" with lore "" and "&cClick &6for see the craft of mega bone meal..."
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to orange stained glass pane
+		set slot 45 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to arrow named "&6« &cPage précédente"
+		set slot 49 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusGiveMenuTrash" of {_s}) to {_s}
 		stop
 	else:
 		send "&4| &cYou do not have permission to use this command !" to {_s}
@@ -393,6 +408,22 @@ function ItemsPlusItemsplusCmdGiveOpenMenuMegaBoneMealCraft(s: sender):
 		send "&4| &cYou do not have permission to use this command !" to {_s}
 		stop
 
+function ItemsPlusItemsplusCmdGiveOpenMenuTrashCraft(s: sender):
+	if {_s} has permission "itemsplus.*" or "itemsplus.give.openmenu" or "itemsplus.give.*":
+		set metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to chest inventory with 5 rows named "&6» &eCraft Trash"
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to redstone
+		set slot 2, 10, 11, 12 and 20 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to paper
+		set slot 14 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to book named "&fTrash" with nbt "{CustomModelData:4}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to arrow named "&6« &cPage précédente"
+		set slot 40 of metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusGiveMenuTrashCraft" of {_s}) to {_s}
+		stop
+	else:
+		send "&4| &cYou do not have permission to use this command !" to {_s}
+		stop
+
 on inventory click:
 	event-inventory = (metadata tag "ItemsPlusGiveMenu" of player):
 		cancel event
@@ -407,6 +438,8 @@ on inventory click:
 			ItemsPlusItemsplusCmdGiveOpenMenuUnclaimFinder(player)
 		if name of event-slot = "&fMega Bone Meal":
 			ItemsPlusItemsplusCmdGiveOpenMenuMegaBoneMeal(player)
+		if name of event-slot = "&fTrash":
+			ItemsPlusItemsplusCmdGiveOpenMenuTrash(player)
 	event-inventory = (metadata tag "ItemsPlusGiveMenuHammer3x3" of player):
 		cancel event
 		if name of event-slot = "&cClose the menu":
@@ -687,6 +720,34 @@ on inventory click:
 			stop
 		if name of event-slot = "&6« &cPage précédente":
 			ItemsPlusItemsplusCmdGiveOpenMenuMegaBoneMeal(player)
+	event-inventory = (metadata tag "ItemsPlusGiveMenuTrash" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage précédente":
+			ItemsPlusItemsplusCmdGiveOpenMenu(player)
+		if name of event-slot = "&8| &fTrash":
+			if player has permission "itemsplus.give.megabonemeal" or "itemsplus.give.*" or "itemsplus.*":
+				close player's inventory
+				give book named "&fTrash" with nbt "{CustomModelData:4}" to player
+				stop
+			else:
+				send "&4| &cYou do not have permission to use this item !" to {_s}
+				stop
+		if name of event-slot = "&fCraft Trash":
+			if player has permission "itemsplus.seecraft.trash" or "itemsplus.seecraft.*" or "itemsplus.*":
+				ItemsPlusItemsplusCmdGiveOpenMenuTrashCraft(player)
+			else:
+				send "&4| &cYou do not have permission to use this item !" to {_s}
+				stop
+	event-inventory = (metadata tag "ItemsPlusGiveMenuTrashCraft" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage précédente":
+			ItemsPlusItemsplusCmdGiveOpenMenuTrash(player)
 
 command /itemsplus [<text>] [<text>]:
 	executable by: player and console
