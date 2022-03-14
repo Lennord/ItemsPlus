@@ -1,0 +1,126 @@
+# |-> ItemsPlus (Skript) << # |->> Skript developed by alexisl315 (Lennord)
+
+# |-> This skript plugin allows you to add lots of other items.
+
+# |-> PLUGIN CODE:
+
+on load:
+	register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}" using diamond block, iron block, diamond block, iron block, compass, iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_1" in group "book"
+	register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}" using diamond block, iron block, diamond block, iron block, book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}", iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_2" in group "book"
+	register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}" using diamond block, iron block, diamond block, iron block, book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}", iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_3" in group "book"
+
+Function ItemsPlusUnclaimFinder(s: sender, typeunclaimfinder: text):
+	if {_typeunclaimfinder} = "Level.1":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result.unclaimfinder.checkblock}
+	if {_typeunclaimfinder} = "Level.2":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = dropper:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = barrel:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = blast furnace:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = dispenser:
+				add 1 to {_result.unclaimfinder.checkblock}
+	if {_typeunclaimfinder} = "Level.3":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = dropper:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = barrel:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = blast furnace:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = smoker:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = lectern:
+				add 1 to {_result.unclaimfinder.checkblock}
+			if loop-block = beacon:
+				add 1 to {_result.unclaimfinder.checkblock}
+	if {_result.unclaimfinder.checkblock} is not set:
+		send action bar  "&6You have unclaim Finder found &c0 block(s)&6." to {_s}
+		stop
+	else:
+		send action bar "&6You have unclaim Finder found &c%{_result.unclaimfinder.checkblock}% block(s)&6." to {_s}
+		stop
+
+on craft:	
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level1" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level2" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+
+on right click:
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.1&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.1")
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.2&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.2")
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.3&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.3")
+
+on enchant prepare:
+	if name of item = "&fUnclaim Finder &7(&cLevel.1&7)" or "&fUnclaim Finder &7(&cLevel.2&7)" or "&fUnclaim Finder &7(&cLevel.3&7)":
+		cancel event
+		stop
+
+on inventory click:
+	event-inventory = anvil inventory:
+		if index of event-slot = 2:
+			if event-slot = book with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = book with nbt "{CustomModelData:2}":
+				cancel event
+				stop
+			if event-slot = book with nbt "{CustomModelData:3}":
+				cancel event
+				stop

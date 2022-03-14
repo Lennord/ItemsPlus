@@ -1,0 +1,13 @@
+# |-> MoreTotem (Skript) << # |->> Skript developed by alexisl315 (Lennord)
+
+# |-> This skript plugin allows you to add lots of other totem.
+
+# |-> PLUGIN CODE:
+
+on load:
+	send "&7[&cItemPlus&7] &8x &2Enabled" to console
+	stop
+
+on unload:
+	send "&7[&cItemPlus&7] &8x &4Disabled" to console
+	stop
