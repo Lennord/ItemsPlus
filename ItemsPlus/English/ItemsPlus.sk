@@ -16,7 +16,7 @@ function ItemsPlusItemsplusCmdReload(s: sender):
 function ItemsPlusItemsplusCmdInfo(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.itemsplus.info" or "itemsplus.itemsplus.*":
 		send "" to {_s}
-		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Description of plugin&6: &cItemsPlus is a skript plugin that allows you to add many new items that have never been seen before in vanilla Minecraft.&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0-SNAPSHOT 2022.3c&f%nl%&8| &7Support version&6: &c1.18.2&f%nl%&8| &7Plugins required&6: &cSkript&7/&cSkBee &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
+		send "&c| &6Informations:&f%nl%%nl%&8| &7Name of plugin&6: &cItemsPlus &7(&cSkript&7)&f%nl%&8| &7Description of plugin&6: &cItemsPlus is a skript plugin that allows you to add many new items that have never been seen before in vanilla Minecraft.&f%nl%&8| &7Creator of plugin&6: &cAlexisl315 &7(Aliases: &cLennord&7)&f%nl%&8| &7Version of plugin&6: &c1.0.0 PRE-RELEASE 1&f%nl%&8| &7Support version&6: &c1.18.2&f%nl%&8| &7Plugins required&6: &cSkript&7/&cSkBee &7and &cSkungee &7(for &cBungeecord&7)" to {_s}
 		stop
 	else:
 		send "&4| &8x &cYou do not have permission to use this command." to {_s}
@@ -37,8 +37,8 @@ function ItemsPlusItemsplusCmdGiveOpenMenu(s: sender):
 		set slot 0 of metadata tag "ItemsPlusGiveMenu" of {_s} to iron pickaxe named "&fHammer &7(&c3x3&7)" with lore "", "&7These hammers can undermine 3 out of 3 blocks.", "" and "&cClick &6for open menu of give all hammer type..." with nbt "{CustomModelData:1}"
 		set slot 1 of metadata tag "ItemsPlusGiveMenu" of {_s} to iron pickaxe named "&fHammer &7(&c5x5&7)" with lore "", "&7These hammers can undermine 5 out of 5 blocks.", "" and "&cClick &6for open menu of give all hammer type..." with nbt "{CustomModelData:1}"
 		set slot 2 of metadata tag "ItemsPlusGiveMenu" of {_s} to book named "&fUnclaim Finder" with lore "", "&7This item allows you to find in percentage the", "&7number of block type concerned by this item.", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:1}"
-		set slot 3 of metadata tag "ItemsPlusGiveMenu" of {_s} to bone meal named "&fMega Bone meal" with lore "", "&7This item allows you to grow seeds up to a maximum", "&7of one hit.", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:1}"
-		set slot 4 of metadata tag "ItemsPlusGiveMenu" of {_s} to book named "&fTrash" with lore "", "&7This item allows you to open a trash can.", "" and "&cClick &6for open menu of give all unclaim finder type..." with nbt "{CustomModelData:4}"
+		set slot 3 of metadata tag "ItemsPlusGiveMenu" of {_s} to bone meal named "&fMega Bone meal" with lore "", "&7This item allows you to grow seeds up to a maximum", "&7of one hit.", "" and "&cClick &6for open menu of give all mega bone meal..." with nbt "{CustomModelData:1}"
+		set slot 4 of metadata tag "ItemsPlusGiveMenu" of {_s} to book named "&fTrash" with lore "", "&7This item allows you to open a trash can.", "" and "&cClick &6for open menu of give trash..." with nbt "{CustomModelData:4}"
 		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusGiveMenu" of {_s} to orange stained glass pane
 		set slot 49 of metadata tag "ItemsPlusGiveMenu" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
 		open (metadata tag "ItemsPlusGiveMenu" of {_s}) to {_s}
@@ -51,7 +51,7 @@ function ItemsPlusItemsplusCmdGiveOpenMenuTrash(s: sender):
 	if {_s} has permission "itemsplus.*" or "itemsplus.give.openmenu" or "itemsplus.give.*":
 		set metadata tag "ItemsPlusGiveMenuTrash" of {_s} to chest inventory with 6 rows named "&6» &eTrash"
 		set slot 13 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to book named "&8| &fTrash" with lore "&7This item allows you to open a trash can.", "" and "&cClick &6for give this trash..." with nbt "{CustomModelData:4}"
-		set slot 22 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to crafting table named "&fCraft Trash" with lore "" and "&cClick &6for see the craft of mega bone meal..."
+		set slot 22 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to crafting table named "&fCraft Trash" with lore "" and "&cClick &6for see the craft of trash..."
 		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to orange stained glass pane
 		set slot 45 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to arrow named "&6« &cPage Back"
 		set slot 49 of metadata tag "ItemsPlusGiveMenuTrash" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
