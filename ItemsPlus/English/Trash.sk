@@ -7,8 +7,9 @@
 on load:
 	register new shaped recipe for book named "&fTrash" with nbt "{CustomModelData:4}" using redstone, paper, redstone, paper, paper, paper, redstone, paper and redstone with id "trash" in group "book"
 
-on right click with book:
-	if name of player's tool = "&fTrash":
+on right click:
+	if event-item = book named "&fTrash" with nbt "{CustomModelData:4}":
+		cancel event
 		set metadata tag "TrashGUI" of player to dropper inventory named "&8Trash"
 		open (metadata tag "TrashGUI" of player) to player
 
