@@ -1,4 +1,15 @@
 # ItemsPlus
-ItemsPlus is a skript plugin that allows you to add many new items that have never been seen before in vanilla Minecraft.
+ItemsPlus is a skript allows you to add new items to the game.
 
-Spigot: https://www.spigotmc.org/resources/itemsplus-skript-1-18-1-bungeecord-spigot-paper-support.100249/
+Spigot: https://www.spigotmc.org/resources/itemsplus-skript-1-18-2.100249/updates
+
+---
+Plugin Requirements:
+
+Skript: https://github.com/SkriptLang/Skript/releases
+
+SkBee: https://github.com/ShaneBeee/SkBee/releases
+
+Skript-YAML: https://www.spigotmc.org/resources/skript-yaml.49829/
+
+
