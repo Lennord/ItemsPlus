@@ -1,0 +1,1158 @@
+#   . ItemsPlus (Skript), Developped by alexisl315 (Alias: Lennord).
+#   . This skript allows you to add new items to the game.
+
+#   --> Code:
+
+on load:
+	load "plugins/ItemsPlus/config.yml"
+	if yaml value "items.Hammers3x3" from "config" = true:
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using oak planks, oak planks, oak planks, oak planks, stick, oak planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using oak planks, spruce planks, spruce planks, spruce planks, stick, spruce planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using birch planks, birch planks, birch planks, birch planks, stick, birch planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using jungle planks, jungle planks, jungle planks, jungle planks, stick, jungle planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using acacia planks, acacia planks, acacia planks, acacia planks, stick, acacia planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using dark oak planks, dark oak planks, dark oak planks, dark oak planks, stick, dark oak planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using crimson planks, crimson planks, crimson planks, crimson planks, stick, crimson planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using warped planks, warped planks, warped planks, warped planks, stick, warped planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using cobblestone, cobblestone, cobblestone, cobblestone, stick, cobblestone, air, stick and air with id "stone_hammer" in group "stone_pickaxe"
+		register new shaped recipe for stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using cobbled deepslate, cobbled deepslate, cobbled deepslate, cobbled deepslate, stick, cobbled deepslate, air, stick and air with id "stone_hammer" in group "stone_pickaxe"
+		register new shaped recipe for iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using iron ingot, iron ingot, iron ingot, iron ingot, stick, iron ingot, air, stick and air with id "iron_hammer" in group "iron_pickaxe"
+		register new shaped recipe for golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using golden ingot, golden ingot, golden ingot, golden ingot, stick, golden ingot, air, stick and air with id "golden_hammer" in group "golden_pickaxe"
+		register new shaped recipe for diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using diamond, diamond, diamond, diamond, stick, diamond, air, stick and air with id "diamond_hammer" in group "diamond_pickaxe"
+		register new shaped recipe for netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" using netherite ingot, netherite ingot, netherite ingot, netherite ingot, stick, netherite ingot, air, stick and air with id "netherite_hammer" in group "netherite_pickaxe"
+	if yaml value "items.Hammers5x5" from "config" = true:
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using oak planks, oak planks, oak planks, oak planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", oak planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using oak planks, spruce planks, spruce planks, spruce planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", spruce planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using birch planks, birch planks, birch planks, birch planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", birch planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using jungle planks, jungle planks, jungle planks, jungle planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", jungle planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using acacia planks, acacia planks, acacia planks, acacia planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", acacia planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using dark oak planks, dark oak planks, dark oak planks, dark oak planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", dark oak planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using crimson planks, crimson planks, crimson planks, crimson planks, wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}", crimson planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using warped planks, warped planks, warped planks, warped planks, wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", warped planks, air, stick and air with id "wooden_hammer" in group "wooden_pickaxe"
+		register new shaped recipe for stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using cobblestone, cobblestone, cobblestone, cobblestone, stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", cobblestone, air, stick and air with id "stone_hammer" in group "stone_pickaxe"
+		register new shaped recipe for stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using cobbled deepslate, cobbled deepslate, cobbled deepslate, cobbled deepslate, stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", cobbled deepslate, air, stick and air with id "stone_hammer" in group "stone_pickaxe"
+		register new shaped recipe for iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using iron ingot, iron ingot, iron ingot, iron ingot, iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", iron ingot, air, stick and air with id "iron_hammer" in group "iron_pickaxe"
+		register new shaped recipe for golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using golden ingot, golden ingot, golden ingot, golden ingot, golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", golden ingot, air, stick and air with id "golden_hammer" in group "golden_pickaxe"
+		register new shaped recipe for diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using diamond, diamond, diamond, diamond, diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", diamond, air, stick and air with id "diamond_hammer" in group "diamond_pickaxe"
+		register new shaped recipe for netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" using netherite ingot, netherite ingot, netherite ingot, netherite ingot, netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}", netherite ingot, air, stick and air with id "netherite_hammer" in group "netherite_pickaxe"
+	if yaml value "items.UnclaimFinder" from "config" = true:
+		register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}" using diamond block, iron block, diamond block, iron block, compass, iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_1" in group "book"
+		register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}" using diamond block, iron block, diamond block, iron block, book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}", iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_2" in group "book"
+		register new shaped recipe for book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}" using diamond block, iron block, diamond block, iron block, book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}", iron block, diamond block, iron block and diamond block with id "unclaim_finder_level_3" in group "book"
+	if yaml value "items.MegaBoneMeal" from "config" = true:
+		register new shaped recipe for 2 bone meal named "&fMega Bone Meal" with nbt "{CustomModelData:1}" using dirt, bone meal, dirt, bone meal, bone meal, bone meal, dirt, bone meal and dirt with id "mega_bone_meal" in group "bone_meal"
+	if yaml value "items.Trash" from "config" = true:
+		register new shaped recipe for book named "&fTrash" with nbt "{CustomModelData:4}" using redstone, paper, redstone, paper, paper, paper, redstone, paper and redstone with id "trash" in group "book"
+
+
+on load:
+	if yaml file "plugins/ItemsPlus/config.yml" doesn't exist:
+		load "plugins/ItemsPlus/config.yml"
+		set yaml value "language" from "config" to "English"
+		set yaml value "items.Hammers3x3" from "config" to true
+		set yaml value "items.Hammers5x5" from "config" to true
+		set yaml value "items.UnclaimFinder" from "config" to true
+		set yaml value "items.MegaBoneMeal" from "config" to true
+		set yaml value "items.Trash" from "config" to true
+		save yaml "config"
+		unload yaml "config"
+		stop
+	else:
+		load "plugins/ItemsPlus/config.yml"
+		if yaml value "language" from "config" != "English":
+			set yaml value "language" from "config" to "English"
+		save yaml "config"
+		unload yaml "config"
+		stop
+
+function ItemsPlusNoPermission(s: sender):
+	load "plugins/ItemsPlus/config.yml"
+	if yaml value "language" from "config" = "English":
+		send "&4| &8x &cYou have not permission to use this command." to {_s}
+		stop
+
+function ItemsPlusNoCommandConsole(s: sender):
+	load "plugins/ItemsPlus/config.yml"
+	if yaml value "language" from "config" = "English":
+		send "&4| &8x &cYou must be a player to use this command." to {_s}
+		stop
+
+function ItemsPlusOpenMenu(s: sender, typemenu: text):
+	if {_typemenu} = "OpenMenuMain":
+		load "plugins/ItemsPlus/config.yml"
+		if yaml value "language" from "config" = "English":
+			set metadata tag "ItemsPlusOpenMenuMain" of {_s} to chest inventory with 6 rows named "Give item type"
+			if yaml value "items.Hammers3x3" from "config" = true:
+				set slot 0 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to iron pickaxe named "&fHammers &7(&c3x3&7)" with lore "", "&7These hammers can undermine 3 out of 3 blocks.", "" and "&cClick &6for open menu of give all hammer type." with nbt "{CustomModelData:1}"
+			else:
+				set slot 0 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to barrier named "&cUnavailable"
+			if yaml value "items.Hammers5x5" from "config" = true:
+				set slot 1 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to iron pickaxe named "&fHammers &7(&c5x5&7)" with lore "", "&7These hammers can undermine 5 out of 5 blocks.", "" and "&cClick &6for open menu of give all hammer type." with nbt "{CustomModelData:1}"
+			else:
+				set slot 1 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to barrier named "&cUnavailable"
+			if yaml value "items.UnclaimFinder" from "config" = true:
+				set slot 2 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to book named "&fUnclaim Finder" with lore "", "&7This item allows you to find in percentage the", "&7number of block type concerned by this item.", "" and "&cClick &6for open menu of give all unclaim finder type." with nbt "{CustomModelData:1}"
+			else:
+				set slot 2 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to barrier named "&cUnavailable"
+			if yaml value "items.MegaBoneMeal" from "config" = true:
+				set slot 3 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to bone meal named "&fMega Bone meal" with lore "", "&7This item allows you to grow seeds up to a maximum", "&7of one hit.", "" and "&cClick &6for open menu of give all mega bone meal." with nbt "{CustomModelData:1}"
+			else:
+				set slot 3 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to barrier named "&cUnavailable"
+			if yaml value "items.Trash" from "config" = true:
+				set slot 4 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to book named "&fTrash" with lore "", "&7This item allows you to open a trash can.", "" and "&cClick &6for open menu of give trash." with nbt "{CustomModelData:4}"
+			else:
+				set slot 4 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to barrier named "&cUnavailable"
+			set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to orange stained glass pane
+			set slot 49 of metadata tag "ItemsPlusOpenMenuMain" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+			open (metadata tag "ItemsPlusOpenMenuMain" of {_s}) to {_s}
+			stop
+	if {_typemenu} = "OpenMenuHammer3x3Main":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to chest inventory with 6 rows named "Hammers - 3x3"
+		set slot 10 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to wooden pickaxe named "&8| &fWooden Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a wooden pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 11 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to stone pickaxe named "&8| &fStone Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a stone pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 12 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to iron pickaxe named "&8| &fIron Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a iron pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to golden pickaxe named "&8| &fGolden Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a golden pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 15 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to diamond pickaxe named "&8| &fDiamond Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a diamond pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to netherite pickaxe named "&8| &fNetherite Hammer &7(&c3x3&7)" with lore "", "&7This type of hammer allows mining like a netherite pickaxe but in 3x3..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 19 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to arrow named "&6« &cPage Back"
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to orange stained glass pane
+		set slot 19 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Wooden Hammer" with lore "" and "&cClick &6for see the craft of wooden hammer." with nbt "{CustomModelData:1}"
+		set slot 20 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Stone Hammer" with lore "" and "&cClick &6for see the craft of stone hammer." with nbt "{CustomModelData:1}"
+		set slot 21 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Iron Hammer" with lore "" and "&cClick &6for see the craft of iron hammer." with nbt "{CustomModelData:1}"
+		set slot 23 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Golden Hammer" with lore "" and "&cClick &6for see the craft of golden hammer." with nbt "{CustomModelData:1}"
+		set slot 24 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Diamond Hammer" with lore "" and "&cClick &6for see the craft of diamond hammer." with nbt "{CustomModelData:1}"
+		set slot 25 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to crafting table named "&fCraft Netherite Hammer" with lore "" and "&cClick &6for see the craft of netherite hammer." with nbt "{CustomModelData:1}"
+		set slot 45 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to arrow named "&6« &cPage Back"
+		set slot 49 of metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3Main" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5Main":	
+		set metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to chest inventory with 6 rows named "Hammers - 5x5"
+		set slot 10 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to wooden pickaxe named "&8| &fWooden Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a wooden pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 11 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to stone pickaxe named "&8| &fStone Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a stone pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 12 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to iron pickaxe named "&8| &fIron Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a iron pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to golden pickaxe named "&8| &fGolden Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a golden pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 15 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to diamond pickaxe named "&8| &fDiamond Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a diamond pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to netherite pickaxe named "&8| &fNetherite Hammer &7(&c5x5&7)" with lore "", "&7This type of hammer allows mining like a netherite pickaxe but in 5x5..", "" and "&cClick &6for give this hammer." with nbt "{CustomModelData:1}"
+		set slot 19 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to arrow named "&6« &cPage Back"
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to orange stained glass pane
+		set slot 19 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Wooden Hammer" with lore "" and "&cClick &6for see the craft of wooden hammer." with nbt "{CustomModelData:1}"
+		set slot 20 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Stone Hammer" with lore "" and "&cClick &6for see the craft of stone hammer." with nbt "{CustomModelData:1}"
+		set slot 21 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Iron Hammer" with lore "" and "&cClick &6for see the craft of iron hammer." with nbt "{CustomModelData:1}"
+		set slot 23 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Golden Hammer" with lore "" and "&cClick &6for see the craft of golden hammer." with nbt "{CustomModelData:1}"
+		set slot 24 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Diamond Hammer" with lore "" and "&cClick &6for see the craft of diamond hammer." with nbt "{CustomModelData:1}"
+		set slot 25 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to crafting table named "&fCraft Netherite Hammer" with lore "" and "&cClick &6for see the craft of netherite hammer." with nbt "{CustomModelData:1}"
+		set slot 45 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to arrow named "&6« &cPage Back"
+		set slot 49 of metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5Main" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuUnclaimFinderMain":
+		set metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to chest inventory with 6 rows named "Unclaim Finder"
+		set slot 12 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.1&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder.", "" and "&cClick &6for give this unclaim finder." with nbt "{CustomModelData:1}"
+		set slot 13 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.2&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder.", "" and "&cClick &6for give this unclaim finder." with nbt "{CustomModelData:2}"
+		set slot 14 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to book named "&8| &fUnclaim Finder &7(&cLevel.3&7)" with lore "", "&7This unclaim finder allows you to find in percentage the", "&7number of block type concerned by this unclaim finder.", "" and "&cClick &6for give this unclaim finder." with nbt "{CustomModelData:3}"
+		set slot 21 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to crafting table named "&fCraft Unclaim Finder Level.1" with lore "" and "&cClick &6for see the craft of unclaim finder Level 1." with nbt "{CustomModelData:1}"
+		set slot 22 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to crafting table named "&fCraft Unclaim Finder Level.2" with lore "" and "&cClick &6for see the craft of unclaim finder Level 2." with nbt "{CustomModelData:1}"
+		set slot 23 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to crafting table named "&fCraft Unclaim Finder Level.3" with lore "" and "&cClick &6for see the craft of unclaim finder Level 3." with nbt "{CustomModelData:1}"
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to orange stained glass pane
+		set slot 45 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to arrow named "&6« &cPage Back"
+		set slot 49 of metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuMegaBoneMealMain":
+		set metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to chest inventory with 6 rows named "Maga Bone Meal"
+		set slot 13 of metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to bone meal named "&8| &fMega Bone Meal" with lore "", "&7This item allows you to grow seeds up to a maximum", "&7of one hit.", "" and "&cClick &6for give this mega bone meal." with nbt "{CustomModelData:1}"
+		set slot 22 of metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to crafting table named "&fCraft Mega Bone Meal" with lore "" and "&cClick &6for see the craft of mega bone meal." with nbt "{CustomModelData:1}"
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to orange stained glass pane
+		set slot 45 of metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to arrow named "&6« &cPage Back"
+		set slot 49 of metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuTrashMain":
+		set metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to chest inventory with 6 rows named "Trash"
+		set slot 13 of metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to book named "&8| &fTrash" with lore "&7This item allows you to open a trash can.", "" and "&cClick &6for give this trash." with nbt "{CustomModelData:4}"
+		set slot 22 of metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to crafting table named "&fCraft Trash" with lore "" and "&cClick &6for see the craft of trash."
+		set slot 36, 37, 38, 39, 40, 41, 42, 43 and 44 of metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to orange stained glass pane
+		set slot 45 of metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to arrow named "&6« &cPage Back"
+		set slot 49 of metadata tag "ItemsPlusOpenMenuTrashMain" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuTrashMain" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftWoodenHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to chest inventory with 5 rows named "Craft Wooden Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to oak planks
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s} to player head with lore "", "&6List of items that can be used for this craft:", "", "&8| &fOak planks", "&8| &fSpruce planks", "&8| &fBirch planks", "&8| &fJungle planks", "&8| &fAcacia planks", "&8| &fDark oak planks", "&8| &fCrimson planks" and "&8| &fWarped planks" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftStoneHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to chest inventory with 5 rows named "Craft Stone Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to cobblestone
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s}) to {_s}
+		set slot 44 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s} to player head with lore "", "&6List of items that can be used for this craft:", "", "&8| &fCobblestone" and "&8| &fCobbled deepslate" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftIronHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to chest inventory with 5 rows named "Craft Iron Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to iron ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftGoldenHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to chest inventory with 5 rows named "Craft Golden Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to golden ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftDiamondHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to chest inventory with 5 rows named "Craft diamond Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to diamond
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer3x3CraftNetheriteHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to chest inventory with 5 rows named "Craft Netherite Hammer - 3x3"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to netherite ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftWoodenHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to chest inventory with 5 rows named "Craft Wooden Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to oak planks
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s} to player head with lore "", "&6List of items that can be used for this craft:", "", "&8| &fOak planks", "&8| &fSpruce planks", "&8| &fBirch planks", "&8| &fJungle planks", "&8| &fAcacia planks", "&8| &fDark oak planks", "&8| &fCrimson planks" and "&8| &fWarped planks" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftStoneHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to chest inventory with 5 rows named "Craft Stone Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to cobblestone
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s}) to {_s}
+		set slot 44 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s} to player head with lore "", "&6List of items that can be used for this craft:", "", "&8| &fCobblestone" and "&8| &fCobbled deepslate" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftIronHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to chest inventory with 5 rows named "Craft Iron Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to iron ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftGoldenHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to chest inventory with 5 rows named "Craft Golden Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to golden ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftDiamondHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to chest inventory with 5 rows named "Craft diamond Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to diamond
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuHammer5x5CraftNetheriteHammer":
+		set metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to chest inventory with 5 rows named "Craft Netherite Hammer - 5x5"
+		set slot 1, 2, 3, 10 and 12 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to netherite ingot
+		set slot 11 and 20 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to stick
+		set slot 14 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of {_s}) to {_s}
+		stop
+
+	if {_typemenu} = "OpenMenuUnclaimFinderCraftLevel1":
+		set metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to chest inventory with 5 rows named "Craft Unclaim Finder Level.1"
+		set slot 11 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to compass
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to diamond block
+		set slot 2, 10, 12 and 20 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to iron block
+		set slot 14 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s} to player head with lore "", "&6List of block check this item:", "", "&8| &fChest", "&8| &fTrapped chest", "&8| &fFurnace", "&8| &fEnderchest", "&8| &fHopper" and "&8| &fJukebox" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuUnclaimFinderCraftLevel2":
+		set metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to chest inventory with 5 rows named "Craft Unclaim Finder Level.2"
+		set slot 11 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}"
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to diamond block
+		set slot 2, 10, 12 and 20 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to iron block
+		set slot 14 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s} to player head with lore "", "&6List of block check this item:", "", "&8| &fChest", "&8| &fTrapped chest", "&8| &fFurnace", "&8| &fEnderchest", "&8| &fHopper", "&8| &fJukebox", "&8| &fDropper", "&8| &fBarrel", "&8| &fBlast furnace" and "&8| &fDispenser" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuUnclaimFinderCraftLevel3":
+		set metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to chest inventory with 5 rows named "Craft Unclaim Finder Level.3"
+		set slot 11 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}"
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to diamond block
+		set slot 2, 10, 12 and 20 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to iron block
+		set slot 14 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s} to player head with lore "", "&6List of block check this item:", "", "&8| &fChest", "&8| &fTrapped chest", "&8| &fFurnace", "&8| &fEnderchest", "&8| &fHopper", "&8| &fJukebox", "&8| &fDropper", "&8| &fBarrel", "&8| &fBlast furnace", "&8| &fDispenser", "&8| &fSmoker", "&8| &fLectern" and "&8| &fBeacon" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuMegaBoneMealCraft":
+		set metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to chest inventory with 5 rows named "Craft Mega Bone Meal"
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to dirt
+		set slot 2, 10, 11, 12 and 20 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to bone meal
+		set slot 14 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to 2 bone meal named "&fMega Bone Meal" with nbt "{CustomModelData:1}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		set slot 44 of metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s} to player head with lore "", "&6List of plants:", "", "&8| &fWheat", "&8| &fCarrot", "&8| &fPotato", "&8| &fMelon", "&8| &fPumpkin" and "&8| &fBeetroot" with nbt "{display:{Name:""{\""text\"":\""&cWarning\""}""},SkullOwner:{Id:[I;-1030211224,-1752151918,-1555090131,-1959895121],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjEzMWU4NTcxY2E0Yzk4MGQwMWVkYTU5NmMyMzc1NzYyYWVkMWZjYTc0NjM5N2EwMTIyNzNjODc3ZmNhYTYxMSJ9fX0=""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuMegaBoneMealCraft" of {_s}) to {_s}
+		stop
+	if {_typemenu} = "OpenMenuTrashCraft":
+		set metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to chest inventory with 5 rows named "&6» &eCraft Trash"
+		set slot 1, 3, 19 and 21 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to redstone
+		set slot 2, 10, 11, 12 and 20 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to paper
+		set slot 14 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&b» » »\""}""},SkullOwner:{Id:[I;-262307579,1796423700,-1313175913,1854300996],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjY3MWM0YzA0MzM3YzM4YTVjN2YzMWE1Yzc1MWY5OTFlOTZjMDNkZjczMGNkYmVlOTkzMjA2NTVjMTlkIn19fQ==""}]}}}"
+		set slot 16 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to book named "&fTrash" with nbt "{CustomModelData:4}"
+		set slot 27, 28, 29, 30, 31, 32, 33, 34 and 35 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to orange stained glass pane
+		set slot 36 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to arrow named "&6« &cPage Back"
+		set slot 40 of metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
+		open (metadata tag "ItemsPlusOpenMenuTrashCraft" of {_s}) to {_s}
+		stop
+
+on load:
+	send "&7[&bItemsPlus&7] &8x &2Enabled" to console
+	stop
+
+on unload:
+	send "&7[&bItemsPlus&7] &8x &cDisabled" to console
+	stop
+
+on mine:
+	if player's tool = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = stone pickaxe named "&fStone Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = iron pickaxe named "&fIron Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 1 to {_result::y1} and {_result::z1}
+					remove 1 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 1 to {_result::x1} and {_result::y1}
+					remove 1 from {_result::x2} and {_result::y2}
+			else:
+				add 1 to {_result::x1} and {_result::z1}
+				remove 1 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+
+on mine:
+	if player's tool = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = stone pickaxe named "&fStone Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = iron pickaxe named "&fIron Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+	if player's tool = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)":
+		if player's gamemode = survival:
+			cancel event
+			set {_result::x1} and {_result::x2} to block's x loc
+			set {_result::y1} and {_result::y2} to block's y loc
+			set {_result::z1} and {_result::z2} to block's z loc
+			if player's pitch is between -50 and 50:
+				if player's horizontal facing = west or east:
+					add 2 to {_result::y1} and {_result::z1}
+					remove 2 from {_result::y2} and {_result::z2}
+				else if player's horizontal facing = north or south:
+					add 2 to {_result::x1} and {_result::y1}
+					remove 2 from {_result::x2} and {_result::y2}
+			else:
+				add 2 to {_result::x1} and {_result::z1}
+				remove 2 from {_result::x2} and {_result::z2}
+			loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
+				if loop-value != bedrock or air or cave air:
+					break loop-value using player's tool
+					damage player's tool by 1
+					if player's tool's durability = player's tool's max durability:
+						clear player's tool
+						exit loop
+
+on right click with bonemeal:
+	if name of player's tool = "&fMega Bone Meal":
+		if event-block = wheat:
+			set event-block to ripe wheat plant
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = carrot plant:
+			set event-block to ripe carrot plant
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = potato plant:
+			set event-block to ripe potato plant
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = beetroot plant:
+			set event-block to ripe beetroot plant
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = melon stem:
+			set event-block to ripe melon stem
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = pumpkin stem:
+			set event-block to ripe pumpkin stem
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+		if event-block = grass block or crimson nylium or warped nylium:
+			if player's gamemode = survival:
+				remove 1 bone meal named "&fMega Bone Meal" from player's inventory
+				stop
+
+Function ItemsPlusUnclaimFinder(s: sender, typeunclaimfinder: text):
+	if {_typeunclaimfinder} = "Level.1":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result::unclaimfinder.checkblock}
+	if {_typeunclaimfinder} = "Level.2":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = dropper:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = barrel:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = blast furnace:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = dispenser:
+				add 1 to {_result::unclaimfinder.checkblock}
+	if {_typeunclaimfinder} = "Level.3":
+		loop all blocks within chunk of {_s}:
+			if loop-block = chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = trapped chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = ender chest:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = hopper:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = furnace:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = jukebox:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = dropper:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = barrel:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = blast furnace:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = smoker:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = lectern:
+				add 1 to {_result::unclaimfinder.checkblock}
+			if loop-block = beacon:
+				add 1 to {_result::unclaimfinder.checkblock}
+	if {_result::unclaimfinder.checkblock} is not set:
+		send action bar  "&6You have unclaim Finder found &c0 block(s)&6." to {_s}
+		stop
+	else:
+		send action bar "&6You have unclaim Finder found &c%{_result::unclaimfinder.checkblock}% block(s)&6." to {_s}
+		stop
+
+on craft:
+	if event-item = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.wooden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = stone pickaxe named "&fStone Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.stone" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = iron pickaxe named "&fIron Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.iron" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.golden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.diamond" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)":
+		if player doesn't have permission "itemsplus.craft.hammer3x3.netherite" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.wooden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = stone pickaxe named "&fStone Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.stone" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = iron pickaxe named "&fIron Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.iron" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.golden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.diamond" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)":
+		if player doesn't have permission "itemsplus.craft.hammer5x5.netherite" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level1" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level2" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)":
+		if player doesn't have permission "itemsplus.craft.unclaimfinder.level3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fMega Bone Meal":
+		if player doesn't have permission "itemsplus.craft.megabonemeal" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+	if event-item = book named "&fTrash":
+		if player doesn't have permission "itemsplus.craft.trash" or "itemsplus.craft.*" or "itemsplus.*":
+			cancel event
+			send "&4| &8x &cYou do not have permission to craft this item." to player
+			stop
+
+on right click:
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.1&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.1")
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.2&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.2")
+	if name of player's tool = "&fUnclaim Finder &7(&cLevel.3&7)":
+		cancel event
+		ItemsPlusUnclaimFinder(player, "Level.3")
+
+on right click:
+	if event-item = book named "&fTrash" with nbt "{CustomModelData:4}":
+		cancel event
+		set metadata tag "TrashGUI" of player to dropper inventory named "&8Trash"
+		open (metadata tag "TrashGUI" of player) to player
+
+on enchant prepare:
+	if name of item = "&fUnclaim Finder &7(&cLevel.1&7)" or "&fUnclaim Finder &7(&cLevel.2&7)" or "&fUnclaim Finder &7(&cLevel.3&7)" or "&fWooden Hammer &7(&c5x5&7)" or "&fStone Hammer &7(&c5x5&7)" or "&fIron Hammer &7(&c5x5&7)" or "&fGolden Hammer &7(&c5x5&7)" or "&fDiamond Hammer &7(&c5x5&7)" or "&fNetherite Hammer &7(&c5x5&7)" or "&fWooden Hammer &7(&c3x3&7)" or "&fStone Hammer &7(&c3x3&7)" or "&fIron Hammer &7(&c3x3&7)" or "&fGolden Hammer &7(&c3x3&7)" or "&fDiamond Hammer &7(&c3x3&7)" or "&fNetherite Hammer &7(&c3x3&7)" or "&fMega Bone Meal" or "&fTrash":
+		cancel event
+		stop
+
+on inventory click:
+	event-inventory = anvil inventory:
+		if index of event-slot = 2:
+			if event-slot = book with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = book with nbt "{CustomModelData:2}":
+				cancel event
+				stop
+			if event-slot = book with nbt "{CustomModelData:3}":
+				cancel event
+				stop
+			if event-slot = book with nbt "{CustomModelData:4}":
+				cancel event
+				stop
+
+on inventory click:
+	event-inventory = anvil inventory:
+		if index of event-slot = 2:
+			if event-slot = bone meal with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+
+on inventory click:
+	event-inventory = (metadata tag "ItemsPlusOpenMenuMain" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&fHammers &7(&c3x3&7)":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3Main")
+		if name of event-slot = "&fHammers &7(&c5x5&7)":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5Main")
+		if name of event-slot = "&fUnclaim Finder":
+			ItemsPlusOpenMenu(player, "OpenMenuUnclaimFinderMain")
+		if name of event-slot = "&fMega Bone Meal":
+			ItemsPlusOpenMenu(player, "OpenMenuMegaBoneMealMain")
+		if name of event-slot = "&fTrash":
+			ItemsPlusOpenMenu(player, "OpenMenuTrashMain")
+	event-inventory = (metadata tag "ItemsPlusOpenMenuHammer3x3Main" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuMain")
+		if name of event-slot = "&fCraft Wooden Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftWoodenHammer")
+		if name of event-slot = "&fCraft Stone Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftStoneHammer")
+		if name of event-slot = "&fCraft Iron Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftIronHammer")
+		if name of event-slot = "&fCraft Golden Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftGoldenHammer")
+		if name of event-slot = "&fCraft Diamond Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftDiamondHammer")
+		if name of event-slot = "&fCraft Netherite Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3CraftNetheriteHammer")
+		if name of event-slot = "&8| &fWooden Hammer &7(&c3x3&7)":
+			close player's inventory
+			give wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fStone Hammer &7(&c3x3&7)":
+			close player's inventory
+			give stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fIron Hammer &7(&c3x3&7)":
+			close player's inventory
+			give iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fGolden Hammer &7(&c3x3&7)":
+			close player's inventory
+			give golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fDiamond Hammer &7(&c3x3&7)":
+			close player's inventory
+			give diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fNetherite Hammer &7(&c3x3&7)":
+			close player's inventory
+			give netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}" to player
+			stop
+	event-inventory = (metadata tag "ItemsPlusOpenMenuHammer5x5Main" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuMain")
+		if name of event-slot = "&fCraft Wooden Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftWoodenHammer")
+		if name of event-slot = "&fCraft Stone Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftStoneHammer")
+		if name of event-slot = "&fCraft Iron Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftIronHammer")
+		if name of event-slot = "&fCraft Golden Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftGoldenHammer")
+		if name of event-slot = "&fCraft Diamond Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftDiamondHammer")
+		if name of event-slot = "&fCraft Netherite Hammer":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5CraftNetheriteHammer")
+		if name of event-slot = "&8| &fWooden Hammer &7(&c5x5&7)":
+			close player's inventory
+			give wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fStone Hammer &7(&c5x5&7)":
+			close player's inventory
+			give stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fIron Hammer &7(&c5x5&7)":
+			close player's inventory
+			give iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fGolden Hammer &7(&c5x5&7)":
+			close player's inventory
+			give golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fDiamond Hammer &7(&c5x5&7)":
+			close player's inventory
+			give diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fNetherite Hammer &7(&c5x5&7)":
+			close player's inventory
+			give netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}" to player
+			stop
+	event-inventory = (metadata tag "ItemsPlusOpenMenuUnclaimFinderMain" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuMain")
+		if name of event-slot = "&fCraft Unclaim Finder Level.1":
+			ItemsPlusOpenMenu(player, "OpenMenuUnclaimFinderCraftLevel1")
+		if name of event-slot = "&fCraft Unclaim Finder Level.2":
+			ItemsPlusOpenMenu(player, "OpenMenuUnclaimFinderCraftLevel2")
+		if name of event-slot = "&fCraft Unclaim Finder Level.3":
+			ItemsPlusOpenMenu(player, "OpenMenuUnclaimFinderCraftLevel3")
+		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.1&7)":
+			close player's inventory
+			give book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}" to player
+			stop
+		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.2&7)":
+			close player's inventory
+			give book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}" to player
+			stop
+		if name of event-slot = "&8| &fUnclaim Finder &7(&cLevel.3&7)":
+			close player's inventory
+			give book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}" to player
+			stop
+	event-inventory = (metadata tag "ItemsPlusOpenMenuMegaBoneMealMain" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuMain")
+		if name of event-slot = "&fCraft Mega Bone Meal":
+			ItemsPlusOpenMenu(player, "OpenMenuMegaBoneMealCraft")
+		if name of event-slot = "&8| &fMega Bone Meal":
+			close player's inventory
+			give bone meal named "&fMega Bone Meal" with nbt "{CustomModelData:1}" to player
+			stop
+	event-inventory = (metadata tag "ItemsPlusOpenMenuTrashMain" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuMain")
+		if name of event-slot = "&fCraft Trash":
+			ItemsPlusOpenMenu(player, "OpenMenuTrashCraft")
+		if name of event-slot = "&8| &fTrash":
+			close player's inventory
+			give book named "&fTrash" with nbt "{CustomModelData:4}" to player
+			stop
+	event-inventory = (metadata tag "ItemsPlusOpenMenuHammer3x3CraftWoodenHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer3x3CraftStoneHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer3x3CraftIronHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer3x3CraftGoldenHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer3x3CraftDiamondHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer3x3CraftNetheriteHammer" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer3x3Main")
+	event-inventory = (metadata tag "ItemsPlusOpenMenuHammer5x5CraftWoodenHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer5x5CraftStoneHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer5x5CraftIronHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer5x5CraftGoldenHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer5x5CraftDiamondHammer" of player) or (metadata tag "ItemsPlusOpenMenuHammer5x5CraftNetheriteHammer" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuHammer5x5Main")
+	event-inventory = (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel1" of player) or (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel2" of player) or (metadata tag "ItemsPlusOpenMenuUnclaimFinderCraftLevel3" of player):
+		cancel event
+		if name of event-slot = "&cClose the menu":
+			close player's inventory
+			stop
+		if name of event-slot = "&6« &cPage Back":
+			ItemsPlusOpenMenu(player, "OpenMenuUnclaimFinderMain")
+
+on inventory click:
+	event-inventory = anvil inventory:
+		if index of event-slot = 2:
+			if event-slot = wooden pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = stone pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = iron pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = golden pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = diamond pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+			if event-slot = netherite pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+				stop
+
+command /itemsplus [<text>] [<text>]:
+	aliases: itemsplus:itemsplus
+	description: &fItemsPlus command /itemsplus.
+	trigger:
+		if arg 1 isn't set:
+			ItemsPlusHelp(sender, "ItemsPlusCMD")
+		else:
+			if arg 1 != "info" or "reload" or "give":
+				ItemsPlusHelp(sender, "ItemsPlusCMD")
+			if arg 1 = "info":
+				load "plugins/ItemsPlus/config.yml"
+				if yaml value "language" from "config" = "English":
+					send "" to sender
+					send "&8| &8x &6Help:" to sender
+					send "" to sender
+					send "&8| &fName of skript: &cItemsplus (Skript)" to sender
+					send "&8| &fAuthor of skript: &calexisl315 (Alias: Lennord)" to sender
+					send "&8| &fDescription of skript: &cThis skript allows you to add new items to the game." to sender
+					send "&8| &fVersion of skript: &c2.0.0" to sender
+					send "&8| &fPlugin requirements: &cSkript&7, &cSkBee &7and &cSkript-YAML" to sender
+					send "&8| &fAll languages of skript: &cEnglish" to sender
+					send "" to sender
+					stop
+			if arg 1 = "reload":
+				make console execute command "/sk reload ItemsPlus"
+				load "plugins/ItemsPlus/config.yml"
+				if yaml value "language" from "config" = "English":
+					send "&7You have been reloaded this skript." to sender
+				stop
+			if arg 1 = "give":
+				if sender = console:
+					ItemsPlusHelp(console, "ItemsPlusCMD")
+				if sender = player:
+					ItemsPlusOpenMenu(player, "OpenMenuMain")
+
+on command "/itemsplus" or "/itemsplus:itemsplus":
+	if sender = player:
+		if player doesn't have permission "itemsplus.itemsplus" or "itemsplus.*":
+			cancel event
+			ItemsPlusNoPermission(player)
+
+function ItemsPlusHelp(s: sender, typehelp: text):
+	load "plugins/ItemsPlus/config.yml"
+	if yaml value "language" from "config" = "English":
+		if {_typehelp} = "ItemsPlusCMD":
+			send "" to {_s}
+			send "&8| &8x &6Help:" to {_s}
+			send "" to {_s}
+			send "&8| &f/itemsplus &binfo &8x &7Seen informations of this skript." to {_s}
+			send "&8| &f/itemsplus &breload &8x &7Reload this skript." to {_s}
+			send "&8| &f/itemsplus &bgive &8x &7Give item type." to {_s}
+			send "" to {_s}
+			stop
