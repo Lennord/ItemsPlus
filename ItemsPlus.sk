@@ -768,103 +768,103 @@ Function ItemsPlusUnclaimFinder(s: sender, typeunclaimfinder: text):
 			stop
 
 on craft:
-	event-item = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)":
+	event-item = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.wooden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = stone pickaxe named "&fStone Hammer &7(&c3x3&7)":
+	event-item = stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.stone" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = iron pickaxe named "&fIron Hammer &7(&c3x3&7)":
+	event-item = iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.iron" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)":
+	event-item = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.golden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)":
+	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.diamond" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)":
+	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.netherite" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)":
+	event-item = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.wooden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = stone pickaxe named "&fStone Hammer &7(&c5x5&7)":
+	event-item = stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.stone" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = iron pickaxe named "&fIron Hammer &7(&c5x5&7)":
+	event-item = iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.iron" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)":
+	event-item = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.golden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)":
+	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.diamond" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)":
+	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.netherite" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)":
+	event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level1" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)":
+	event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level2" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)":
+	event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = book named "&fMega Bone Meal":
+	event-item = bone meal named "&fMega Bone Meal" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.megabonemeal" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
 			yaml value "language" from "config" = "English":
 				send "&4| &8x &cYou do not have permission to craft this item." to player
-	event-item = book named "&fTrash":
+	event-item = book named "&fTrash" with nbt "{CustomModelData:4}":
 		player doesn't have permission "itemsplus.craft.trash" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
 			load "plugins/ItemsPlus/config.yml"
@@ -909,11 +909,19 @@ on inventory click:
 				cancel event
 			event-slot = book with nbt "{CustomModelData:4}":
 				cancel event
-
-on inventory click:
-	event-inventory = anvil inventory:
-		index of event-slot = 2:
 			event-slot = bone meal with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = wooden pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = stone pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = iron pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = golden pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = diamond pickaxe with nbt "{CustomModelData:1}":
+				cancel event
+			event-slot = netherite pickaxe with nbt "{CustomModelData:1}":
 				cancel event
 
 on inventory click:
@@ -1078,22 +1086,6 @@ on inventory click:
 				close player's inventory
 			name of event-slot = "&6« &cPage Back":
 				ItemsPlusOpenMenu(player, "OpenMenuTrashMain")
-
-on inventory click:
-	event-inventory = anvil inventory:
-		index of event-slot = 2:
-			event-slot = wooden pickaxe with nbt "{CustomModelData:1}":
-				cancel event
-			event-slot = stone pickaxe with nbt "{CustomModelData:1}":
-				cancel event
-			event-slot = iron pickaxe with nbt "{CustomModelData:1}":
-				cancel event
-			event-slot = golden pickaxe with nbt "{CustomModelData:1}":
-				cancel event
-			event-slot = diamond pickaxe with nbt "{CustomModelData:1}":
-				cancel event
-			event-slot = netherite pickaxe with nbt "{CustomModelData:1}":
-				cancel event
 
 command /itemsplus [<text>] [<text>]:
 	aliases: itemsplus:itemsplus
