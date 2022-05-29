@@ -1,7 +1,7 @@
 # ItemsPlus
 ItemsPlus is a skript allows you to add new items to the game.
 
-Spigot: https://www.spigotmc.org/resources/itemsplus-skript-1-18-2.100249/updates
+Spigot: https://www.spigotmc.org/resources/itemsplus-skript-1-18-2.100249/
 
 ---
 Plugin Requirements:
