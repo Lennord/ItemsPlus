@@ -968,7 +968,7 @@ command /itemsplus [<text>] [<text>]:
 					send "&8| &fName of skript: &cItemsplus (Skript)" to sender
 					send "&8| &fAuthor of skript: &cAlexisl315 (Alias: Lennord)" to sender
 					send "&8| &fDescription of skript: &cThis skript allows you to add new items to the game." to sender
-					send "&8| &fVersion of skript: &c2.0.4" to sender
+					send "&8| &fVersion of skript: &c2.0.5" to sender
 					send "&8| &fPlugin requirements: &cSkript&7, &cSkBee &7and &cSkript-YAML" to sender
 					send "&8| &fAll languages of skript: &cEnglish" to sender
 					send "" to sender
