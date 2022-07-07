@@ -1,8 +1,3 @@
-#   . ItemsPlus (Skript), Developped by alexisl315 (Alias: Lennord).
-#   . This skript allows you to add new items to the game.
-
-#   --> Code:
-
 on load:
 	yaml file "plugins/ItemsPlus/config.yml" doesn't exist:
 		load "plugins/ItemsPlus/config.yml"
@@ -14,15 +9,14 @@ on load:
 		set yaml value "items.Trash" from "config" to true
 		set yaml value "items.Katana" from "config" to true
 		save yaml "config"
-		unload yaml "config"
 		stop
 	else:
 		load "plugins/ItemsPlus/config.yml"
 		yaml value "language" from "config" != "English":
 			set yaml value "language" from "config" to "English"
 		save yaml "config"
-		unload yaml "config"
-		stop
+	unload yaml "config"
+	send "&7[&bItemsPlus&7] &8x &2Enabled" to console
 
 on load:
 	load "plugins/ItemsPlus/config.yml"
@@ -390,9 +384,6 @@ function ItemsPlusOpenMenu(s: sender, typemenu: text):
 			set slot 40 of metadata tag "ItemsPlusOpenMenuKatanaCraft" of {_s} to player head with nbt "{display:{Name:""{\""text\"":\""&cClose the menu\""}""},SkullOwner:{Id:[I;1590668272,1381189552,-1538418164,-1841266247],Properties:{textures:[{Value:""eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmViNTg4YjIxYTZmOThhZDFmZjRlMDg1YzU1MmRjYjA1MGVmYzljYWI0MjdmNDYwNDhmMThmYzgwMzQ3NWY3In19fQ==""}]}}}"
 			open (metadata tag "ItemsPlusOpenMenuKatanaCraft" of {_s}) to {_s}
 
-on load:
-	send "&7[&bItemsPlus&7] &8x &2Enabled" to console
-
 on unload:
 	send "&7[&bItemsPlus&7] &8x &cDisabled" to console
 
@@ -402,279 +393,127 @@ on mine:
 		player's tool = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = stone pickaxe named "&fStone Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = iron pickaxe named "&fIron Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 1 to {_result::y1} and {_result::z1}
-						remove 1 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 1 to {_result::x1} and {_result::y1}
-						remove 1 from {_result::x2} and {_result::y2}
-				else:
-					add 1 to {_result::x1} and {_result::z1}
-					remove 1 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem3x3Use(player)
 		player's tool = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
 		player's tool = stone pickaxe named "&fStone Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
 		player's tool = iron pickaxe named "&fIron Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
 		player's tool = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
 		player's tool = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
 		player's tool = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)":
 			player's gamemode = survival:
 				cancel event
-				set {_result::x1} and {_result::x2} to block's x loc
-				set {_result::y1} and {_result::y2} to block's y loc
-				set {_result::z1} and {_result::z2} to block's z loc
-				player's pitch is between -50 and 50:
-					player's horizontal facing = west or east:
-						add 2 to {_result::y1} and {_result::z1}
-						remove 2 from {_result::y2} and {_result::z2}
-					player's horizontal facing = north or south:
-						add 2 to {_result::x1} and {_result::y1}
-						remove 2 from {_result::x2} and {_result::y2}
-				else:
-					add 2 to {_result::x1} and {_result::z1}
-					remove 2 from {_result::x2} and {_result::z2}
-				loop blocks within location at {_result::x1}, {_result::y1}, {_result::z1} in player's world and location at {_result::x2}, {_result::y2}, {_result::z2} in player's world:
-					loop-value != bedrock or air or cave air:
-						break loop-value using player's tool
-						damage player's tool by 1
-						player's tool's durability = player's tool's max durability:
-							clear player's tool
-							exit loop
+				set {ItemsPlus::%player's uuid%::result::x1} and {ItemsPlus::%player's uuid%::result::x2} to block's x loc
+				set {ItemsPlus::%player's uuid%::result::y1} and {ItemsPlus::%player's uuid%::result::y2} to block's y loc
+				set {ItemsPlus::%player's uuid%::result::z1} and {ItemsPlus::%player's uuid%::result::z2} to block's z loc
+				HammersItem5x5Use(player)
+
+function HammersItem3x3Use(s: sender):
+	{_s}'s pitch is between -50 and 50:
+		{_s}'s facing = west or east:
+			add 1 to {ItemsPlus::%{_s}'s uuid%::result::y1} and {ItemsPlus::%{_s}'s uuid%::result::z1}
+			remove 1 from {ItemsPlus::%{_s}'s uuid%::result::y2} and {ItemsPlus::%{_s}'s uuid%::result::z2}
+		{_s}'s facing = north or south:
+			add 1 to {ItemsPlus::%{_s}'s uuid%::result::x1} and {ItemsPlus::%{_s}'s uuid%::result::y1}
+			remove 1 from {ItemsPlus::%{_s}'s uuid%::result::x2} and {ItemsPlus::%{_s}'s uuid%::result::y2}
+	else:
+		add 1 to {ItemsPlus::%{_s}'s uuid%::result::x1} and {ItemsPlus::%{_s}'s uuid%::result::z1}
+		remove 1 from {ItemsPlus::%{_s}'s uuid%::result::x2} and {ItemsPlus::%{_s}'s uuid%::result::z2}
+	loop blocks within location at {ItemsPlus::%{_s}'s uuid%::result::x1}, {ItemsPlus::%{_s}'s uuid%::result::y1}, {ItemsPlus::%{_s}'s uuid%::result::z1} in {_s}'s world and location at {ItemsPlus::%{_s}'s uuid%::result::x2}, {ItemsPlus::%{_s}'s uuid%::result::y2}, {ItemsPlus::%{_s}'s uuid%::result::z2} in {_s}'s world:
+		loop-value != bedrock or air or cave air:
+			break loop-value using {_s}'s tool
+			damage {_s}'s tool by 1
+			{_s}'s tool's durability = {_s}'s tool's max durability:
+				clear {_s}'s tool
+				exit loop
+	delete {ItemsPlus::%{_s}'s uuid%::*}
+
+function HammersItem5x5Use(s: sender):
+	{_s}'s pitch is between -50 and 50:
+		{_s}'s facing is west or east:
+			add 2 to {ItemsPlus::%{_s}'s uuid%::result::y1} and {ItemsPlus::%{_s}'s uuid%::result::z1}
+			remove 2 from {ItemsPlus::%{_s}'s uuid%::result::y2} and {ItemsPlus::%{_s}'s uuid%::result::z2}
+		{_s}'s facing is north or south:
+			add 2 to {ItemsPlus::%{_s}'s uuid%::result::x1} and {ItemsPlus::%{_s}'s uuid%::result::y1}
+			remove 2 from {ItemsPlus::%{_s}'s uuid%::result::x2} and {ItemsPlus::%{_s}'s uuid%::result::y2}
+	else:
+		add 2 to {ItemsPlus::%{_s}'s uuid%::result::x1} and {ItemsPlus::%{_s}'s uuid%::result::z1}
+		remove 2 from {ItemsPlus::%{_s}'s uuid%::result::x2} and {ItemsPlus::%{_s}'s uuid%::result::z2}
+	loop blocks within location at {ItemsPlus::%{_s}'s uuid%::result::x1}, {ItemsPlus::%{_s}'s uuid%::result::y1}, {ItemsPlus::%{_s}'s uuid%::result::z1} in {_s}'s world and location at {ItemsPlus::%{_s}'s uuid%::result::x2}, {ItemsPlus::%{_s}'s uuid%::result::y2}, {ItemsPlus::%{_s}'s uuid%::result::z2} in {_s}'s world:
+		loop-value != bedrock or air or cave air:
+			break loop-value using {_s}'s tool
+			damage {_s}'s tool by 1
+			{_s}'s tool's durability = {_s}'s tool's max durability:
+				clear {_s}'s tool
+				exit loop
+	delete {ItemsPlus::%{_s}'s uuid%::*}
 
 on right click with bonemeal:
 	name of player's tool = "&fMega Bone Meal":
@@ -726,181 +565,150 @@ Function ItemsPlusUnclaimFinder(s: sender, typeunclaimfinder: text):
 		{_typeunclaimfinder} = "Level.1":
 			loop all blocks within chunk of {_s}:
 				loop-block = chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = trapped chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = ender chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = hopper:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = furnace:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = jukebox:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 		{_typeunclaimfinder} = "Level.2":
 			loop all blocks within chunk of {_s}:
 				loop-block = chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = trapped chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = ender chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = hopper:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = furnace:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = jukebox:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = dropper:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = barrel:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = blast furnace:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = dispenser:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 		{_typeunclaimfinder} = "Level.3":
 			loop all blocks within chunk of {_s}:
 				loop-block = chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = trapped chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = ender chest:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = hopper:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = furnace:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = jukebox:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = dropper:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = barrel:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = blast furnace:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = smoker:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = lectern:
-					add 1 to {_result::unclaimfinder.checkblock}
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
 				loop-block = beacon:
-					add 1 to {_result::unclaimfinder.checkblock}
-		{_result::unclaimfinder.checkblock} is not set:
+					add 1 to {ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}
+		{ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock} is not set:
 			send action bar  "&6You have unclaim Finder found &c0 block(s)&6." to {_s}
 			stop
 		else:
-			send action bar "&6You have unclaim Finder found &c%{_result::unclaimfinder.checkblock}% block(s)&6." to {_s}
+			send action bar "&6You have unclaim Finder found &c%{ItemsPlus::%{_s}'s uuid%::result::unclaimfinder.checkblock}% block(s)&6." to {_s}
 			stop
+
+function ItemsCraftNoPermission(s: sender):
+	load "plugins/ItemsPlus/config.yml"
+	yaml value "language" from "config" = "English":
+		send "&4| &8x &cYou do not have permission to craft this item." to {_s}
 
 on craft:
 	event-item = wooden pickaxe named "&fWooden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.wooden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = stone pickaxe named "&fStone Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.stone" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = iron pickaxe named "&fIron Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.iron" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = golden pickaxe named "&fGolden Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.golden" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.diamond" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c3x3&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer3x3.netherite" or "itemsplus.craft.hammer3x3.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = wooden pickaxe named "&fWooden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.wooden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = stone pickaxe named "&fStone Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.stone" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = iron pickaxe named "&fIron Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.iron" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = golden pickaxe named "&fGolden Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.golden" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = diamond pickaxe named "&fDiamond Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.diamond" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = netherite pickaxe named "&fNetherite Hammer &7(&c5x5&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.hammer5x5.netherite" or "itemsplus.craft.hammer5x5.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = book named "&fUnclaim Finder &7(&cLevel.1&7)" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level1" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = book named "&fUnclaim Finder &7(&cLevel.2&7)" with nbt "{CustomModelData:2}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level2" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = book named "&fUnclaim Finder &7(&cLevel.3&7)" with nbt "{CustomModelData:3}":
 		player doesn't have permission "itemsplus.craft.unclaimfinder.level3" or "itemsplus.craft.unclaimfinder.*" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = bone meal named "&fMega Bone Meal" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.megabonemeal" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = book named "&fTrash" with nbt "{CustomModelData:4}":
 		player doesn't have permission "itemsplus.craft.trash" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 	event-item = iron sword named "&fKatana" with nbt "{CustomModelData:1}":
 		player doesn't have permission "itemsplus.craft.katana" or "itemsplus.craft.*" or "itemsplus.*":
 			cancel event
-			load "plugins/ItemsPlus/config.yml"
-			yaml value "language" from "config" = "English":
-				send "&4| &8x &cYou do not have permission to craft this item." to player
+			ItemsCraftNoPermission(player)
 
 on right click:
 	load "plugins/ItemsPlus/config.yml"
@@ -1158,7 +966,7 @@ command /itemsplus [<text>] [<text>]:
 					send "&8| &8x &6Help:" to sender
 					send "" to sender
 					send "&8| &fName of skript: &cItemsplus (Skript)" to sender
-					send "&8| &fAuthor of skript: &calexisl315 (Alias: Lennord)" to sender
+					send "&8| &fAuthor of skript: &cAlexisl315 (Alias: Lennord)" to sender
 					send "&8| &fDescription of skript: &cThis skript allows you to add new items to the game." to sender
 					send "&8| &fVersion of skript: &c2.0.4" to sender
 					send "&8| &fPlugin requirements: &cSkript&7, &cSkBee &7and &cSkript-YAML" to sender
@@ -1175,8 +983,9 @@ command /itemsplus [<text>] [<text>]:
 				sender = player:
 					ItemsPlusOpenMenu(player, "OpenMenuMain")
 
-on command "/itemsplus" or "/itemsplus:itemsplus":
+on command:
 	sender = player:
-		player doesn't have permission "itemsplus.itemsplus" or "itemsplus.*":
-			cancel event
-			ItemsPlusNoPermission(player)
+		command = "itemsplus" or "itemsplus:itemsplus":
+			player doesn't have permission "itemsplus.itemsplus" or "itemsplus.*":
+				cancel event
+				ItemsPlusNoPermission(player)
